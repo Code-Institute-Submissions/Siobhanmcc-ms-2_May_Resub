@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Explore Kildare</title>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0">
+    <header>
+        <!--Navigation bar-->
+        <nav id="navbar-example2" class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <h2 id="logo">EXPLORE KILDARE </h2>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0" id="menu">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#home">Home<span class="sr-only"></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">Restaurants</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">Attractions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Hotels</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header> 
+    <section id="hero-outer">
+        <div id="main-image"></div>
+        </div>
+    </section>
+    <section><h2 id="hotels">Where to visit?</h2>
+    <div id="map"></div>
+
+    <script>
+function initMap() {
+   var options = {
+      zoom:8,
+      center: { lat:53.16190, lng:-6.90365} //Coordinates of Kildare 
+   }
+var map = new google.maps.Map(document.getElementById('map'), options);
+
+function addMarker(prop) {
+   var marker = new google.maps.Marker({
+      position: prop.coordinates, // Passing the coordinates
+      map:map, //Map that we need to add
+      draggarble: false// If set to true you can drag the marker
+   });
+   if(prop.iconImage) { marker.setIcon(prop.iconImage); }
+   if(prop.content) { 
+      var information = new google.maps.InfoWindow({
+      content: prop.content
+      });
+      
+      marker.addListener('click', function() {
+      information.open(map, marker);
+      });
+   }
+}
+
+addMarker({
+   coordinates:{lat: 53.14491, lng: -6.90177}, //Kildare National Stud Coordinates
+   content:'<h4>This is some <a href="link here">test content<a></h4>'
+});
+addMarker({coordinates:{lat: 53.30673, lng: -6.62524},
+           content: '<h4>This is some more test content</h4>'
+        }); // K-Club Coordinates
+
+
+}
+</script>
+<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfwTI3WULHOK4JLWvumndoexg4919Z1Jk&callback=initMap"></script>
+    </body>
+    </html>
+       
+
+     <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+</body>
+</html>

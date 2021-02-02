@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+
+body {
+    font-family: 'Open Sans';
+    color: #777777;
+    
+}
+
+* {
+    margin:0;
+    padding:0;
+    border:0;
+}
+
+/*Navbar*/
+
+h2 {
+    color: #555555;
+    margin-left:15px;
+    font-size:30px;  
+    text-decoration: none;
+
+}
+
+#menu li {
+    float:right;
+    list-style-type: none;
+    margin-right:30px;
+    font-size:20px;
+}
+
+#menu a {
+    text-decoration: none;
+}
+
+#menu, #logo {
+    line-height: 50px;
+}
+
+/*Hero Image*/
+
+#main-image {
+    height:600px;
+    width:100%;
+    background:url('../images/kildare.jpg') no-repeat center;
+    background-size: cover;
+    z-index:1;
+    position:relative;
+}
+
+#hero-outer {
+    height:600px;
+    width:100%;
+    overflow:hidden;
+    position:relative;
+
+}
+
+#hotels {
+    text-align:center;
+}
+
+#map {min-height: 360px;
+      float:center;}
+
+#mappy {
+    width=400px;
+    height=600px;
+}
+
+#map2 {
+    min-height: 360px;
+}
