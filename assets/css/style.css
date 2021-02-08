@@ -20,6 +20,7 @@ h2 {
     margin-left:15px;
     font-size:30px;  
     text-decoration: none;
+    text-align:center;
 
 }
 
@@ -57,17 +58,18 @@ h2 {
 
 }
 
-#hotels {
+#where-to-visit {
     text-align:center;
+    margin: 20px 0 20px 0;
 }
 
 #map {min-height: 360px;
       float:center;}
 
-#mappy {
-    width=400px;
-    height=600px;
-}
+      #about {
+    text-align:center;
+    margin: 20px 0 20px 0;
+      }
 
 #map2 {
     min-height: 360px;

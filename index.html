@@ -27,13 +27,13 @@
                             <a class="nav-link" href="#home">Home<span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#about">Restaurants</a>
+                            <a class="nav-link" href="#about">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#skills">Attractions</a>
+                            <a class="nav-link" href="#where-to-visit">Where to visit?</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#projects">Hotels</a>
+                            <a class="nav-link" href="#contact">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -44,7 +44,14 @@
         <div id="main-image"></div>
         </div>
     </section>
-    <section><h2 id="hotels">Where to visit?</h2>
+    <section><h2 id="about">About</h2>
+    <p>Kildare (Irish: Cill Dara, meaning "church of the oak") is a town in County Kildare, Ireland. As of 2016, its population
+    was 8,634[2] making it the 7th largest town in County Kildare. The town lies on the R445, some 50 km (31 mi) west of
+    Dublin – near enough for it to have become, despite being a regional centre in its own right, a commuter town for the
+    capital. Although Kildare gives its name to the county, Naas is the county town.</p>
+    </section>
+
+    <section><h2 id="where-to-visit">Where to visit?</h2>
     <div id="map"></div>
 
     <script>
@@ -75,15 +82,53 @@ function addMarker(prop) {
 
 addMarker({
    coordinates:{lat: 53.14491, lng: -6.90177}, //Kildare National Stud Coordinates
-   content:'<h4>This is some <a href="link here">test content<a></h4>'
+   content:'<a href="https://irishnationalstud.ie/"> The National Stud<a>'
 });
 addMarker({coordinates:{lat: 53.30673, lng: -6.62524},
-           content: '<h4>This is some more test content</h4>'
+           content: '<a href="https://www.kclub.ie/">The K Club</a>'
         }); // K-Club Coordinates
-
+        
+addMarker({coordinates:{lat: 53.15752, lng: -6.91111},
+           content: '<a href="https://harteskildare.ie//">Hartes of Kildare</a>'
+        }); // Hartes of Kildare Coordinates
 
 }
 </script>
+<section class="container"><h2 id="Contact">Contact
+        <div class="row justify-content-md-center">
+            <div class="col-sm-12 col-md-8">
+                <form method="POST" action="https://formdump.codeinstitute.net/" target="_blank">
+                    <div class="form-group mb-3">
+                        <label for="exampleInputName1" class="form-label">Name</label>
+                        <input type="name" class="form-control" id="exampleInputName1" aria-describedby="Name"
+                            placeholder="Enter name here">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="exampleInputPassword1"
+                            placeholder="Enter email here">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Enter query here</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer"><a href="https://www.facebook.com/siobhan.mccauley.33" target="_blank"><i
+                    class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/siobhanmarynyc/?hl=en" target="_blank"><i
+                    class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/siobhanmcc123" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+
+
+
 <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfwTI3WULHOK4JLWvumndoexg4919Z1Jk&callback=initMap"></script>
     </body>
