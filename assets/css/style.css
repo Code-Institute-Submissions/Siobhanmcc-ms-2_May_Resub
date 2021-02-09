@@ -21,6 +21,7 @@ h2 {
     font-size:30px;  
     text-decoration: none;
     text-align:center;
+    padding:10px;
 
 }
 
@@ -58,6 +59,10 @@ h2 {
 
 }
 
+p{
+    margin:10px;
+}
+
 #where-to-visit {
     text-align:center;
     margin: 20px 0 20px 0;
@@ -68,9 +73,13 @@ h2 {
 
       #about {
     text-align:center;
-    margin: 20px 0 20px 0;
+    margin: 20px;
       }
 
 #map2 {
     min-height: 360px;
+}
+
+footer{
+    min-height:20px;
 }
