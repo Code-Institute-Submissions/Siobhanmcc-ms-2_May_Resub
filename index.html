@@ -52,48 +52,109 @@
     </section>
 
     <section><h2 id="where-to-visit">Where to visit?</h2>
-    <div id="map"></div>
+     <div class='container'>
 
-    <script>
-function initMap() {
-   var options = {
-      zoom:8,
-      center: { lat:53.16190, lng:-6.90365} //Coordinates of Kildare 
-   }
-var map = new google.maps.Map(document.getElementById('map'), options);
+                    <input type='hidden' name='tour' value=false />
 
-function addMarker(prop) {
-   var marker = new google.maps.Marker({
-      position: prop.coordinates, // Passing the coordinates
-      map:map, //Map that we need to add
-      draggarble: false// If set to true you can drag the marker
-   });
-   if(prop.iconImage) { marker.setIcon(prop.iconImage); }
-   if(prop.content) { 
-      var information = new google.maps.InfoWindow({
-      content: prop.content
-      });
-      
-      marker.addListener('click', function() {
-      information.open(map, marker);
-      });
-   }
-}
+                    <div class='container'>
 
-addMarker({
-   coordinates:{lat: 53.14491, lng: -6.90177}, //Kildare National Stud Coordinates
-   content:'<a href="https://irishnationalstud.ie/"> The National Stud<a>'
-});
-addMarker({coordinates:{lat: 53.30673, lng: -6.62524},
-           content: '<a href="https://www.kclub.ie/">The K Club</a>'
-        }); // K-Club Coordinates
-        
-addMarker({coordinates:{lat: 53.15752, lng: -6.91111},
-           content: '<a href="https://harteskildare.ie//">Hartes of Kildare</a>'
-        }); // Hartes of Kildare Coordinates
+                        <div class='form-check-inline'>
+                            <label class='form-check-label'>
+                                <input name='tour' value='restaurant' type='radio' class='form-check-input' />Restaurant
+                            </label>
+                        </div>
 
-}
-</script>
+                        <div class='form-check-inline'>
+                            <label class='form-check-label'>
+                                <input name='tour' value='hotel' type='radio' class='form-check-input' />Hotel
+                            </label>
+                        </div>
+                    </div>
+<div id="map"></div>
+
+
+        <script>
+            let map;
+            let markers=[];
+            let infoWindow;
+
+            let locations = [
+                {
+                    name: 'one',
+                    tour: 'hotel',
+                    latlng: { lat: 53.14491, lng: -6.9017 },
+                    content: 'google',
+                },
+                {
+                    name: 'one',
+                    tour: 'gaudi',
+                    latlng: { lat: 41.4145, lng: 2.1527 },
+                    content: 'maps',
+                },
+                {
+                    name: 'two',
+                    tour: 'gothic',
+                    latlng: { lat: 41.3839, lng: 2.1821 },
+                    content: 'are'
+                },
+                {
+                    name: 'two',
+                    tour: 'gothic',
+                    latlng: { lat: 41.3840, lng: 2.1762 },
+                    content: 'annoying'
+                }
+            ];
+
+
+            function initMap(){
+                let options = {
+                    center: new google.maps.LatLng(53.16190, -6.90365),
+                    zoom: 12
+                };
+                map = new google.maps.Map( document.getElementById('map'), options );
+                infoWindow = new google.maps.InfoWindow();
+
+
+
+                const addmarker=function(args){
+                    let mkr=new google.maps.Marker({
+                        position: args.latlng,
+                        map: map
+                    });
+                    if( args.hasOwnProperty('icon') ) mkr.setIcon( args.icon );
+                    if( args.hasOwnProperty('name') ) mkr.name=args.name;
+                    if( args.hasOwnProperty('content') ) mkr.content=args.content;
+
+                    google.maps.event.addListener( mkr, 'click', clickhandler );
+                    return mkr;
+                };
+                const clickhandler=function(e){
+                    infoWindow.open( map, this );
+                    infoWindow.setContent( this.content );
+                };
+                const clearmarkers=function(){
+                    markers.forEach( mkr=>{
+                        mkr.setMap( null );
+                    });
+                };
+
+                Array.prototype.slice.call( document.querySelectorAll('input[type="radio"][name="tour"]') ).forEach(function(input){
+                    input.addEventListener('click', function(e){
+                        if( this.value ){
+                            /* clear any markers added to the map already */
+                            clearmarkers();
+
+                            /* only show those that qualify based upon selected tour */
+                            locations.forEach( obj=>{
+                                if( obj.tour==this.value ) markers.push( addmarker.call( this, obj ) );
+                            });
+                        }
+                    });
+                });
+            }
+        </script>
+<section>
+
 <section class="container"><h2 id="contact">Contact</h2>
         <div class="row justify-content-md-center">
             <div class="col-sm-12 col-md-8">

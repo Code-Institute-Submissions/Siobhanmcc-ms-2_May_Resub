@@ -1,51 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
+<script src="https://maps.googleapis.com/maps/api/js?key=&v=3.0&sensor=true&language=ee&dummy=dummy.js"></script>
+<div id="map-canvas"></div>
+<select id="type" onchange="filterMarkers(this.value);">
+    <option value="">Please select category</option>
+    <option value="second">second</option>
+    <option value="car">car</option>
+    <option value="third">third</option>
+</select>
 
-    <div id="mappy">My Google Map</div>
-<section>
+
 <script>
-function initMap() {
-   var options = {
-      zoom:10,
-      center: { lat:40.730610, lng:-73.935242} //Coordinates of New York 
-   }
-var map = new google.maps.Map(document.getElementById('mappy'), options);
 
-function addMarker(prop) {
-   var marker = new google.maps.Marker({
-      position: prop.coordinates, // Passing the coordinates
-      map:map, //Map that we need to add
-      draggarble: false// If set to true you can drag the marker
-   });
-   if(prop.iconImage) { marker.setIcon(prop.iconImage); }
-   if(prop.content) { 
-      var information = new google.maps.InfoWindow({
-      content: prop.content
-      });
-      
-      marker.addListener('click', function() {
-      information.open(map, marker);
-      });
-   }
-}
-
-addMarker({
-   coordinates:{lat: 40.6782, lng: -73.9442},
-   iconImage:'https://img.icons8.com/fluent/48/000000/marker-storm.png',
-   content:'<h4>Brooklyn Marker</h4>'
+var gmarkers1 = [];
+var markers1 = [];
+var infowindow = new google.maps.InfoWindow({
+    content: ''
 });
-addMarker({coordinates:{lat: 40.7831, lng: -73.9712}}); // Manhattan Coordinates
 
+// Our markers
+markers1 = [
+  ['0', 'Title 1', 52.4357808, 4.991315699999973, ['car', 'second']],
+  ['1', 'Title 2', 52.4357808, 4.981315699999973, ['third']],
+  ['2', 'Title 3', 52.4555687, 5.039231599999994, ['car', 'third']],
+  ['3', 'Title 4', 52.4555687, 5.029231599999994, ['second']]
+];
+
+/**
+ * Function to init map
+ */
+
+function initialize() {
+    var center = new google.maps.LatLng(52.4357808, 4.991315699999973);
+    var mapOptions = {
+        zoom: 12,
+        center: center,
+        mapTypeId: google.maps.MapTypeId.TERRAIN
+    };
+
+    map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    for (i = 0; i < markers1.length; i++) {
+        addMarker(markers1[i]);
+    }
 }
+
+/**
+ * Function to add marker to map
+ */
+
+function addMarker(marker) {
+    var category = marker[4];
+    var title = marker[1];
+    var pos = new google.maps.LatLng(marker[2], marker[3]);
+    var content = marker[1];
+
+    marker1 = new google.maps.Marker({
+        title: title,
+        position: pos,
+        category: category,
+        map: map
+    });
+
+    gmarkers1.push(marker1);
+
+    // Marker click listener
+    google.maps.event.addListener(marker1, 'click', (function (marker1, content) {
+        return function () {
+            console.log('Gmarker 1 gets pushed');
+            infowindow.setContent(content);
+            infowindow.open(map, marker1);
+            map.panTo(this.getPosition());
+            map.setZoom(15);
+        }
+    })(marker1, content));
+}
+
+/**
+ * Function to filter markers by category
+ */
+
+filterMarkers = function (category) {
+    for (i = 0; i < gmarkers1.length; i++) {
+        marker = gmarkers1[i];
+        // If is same category or category not picked
+        if((typeof marker.category == 'object' && marker.category.indexOf(category) >= 0) || category.length == 0){
+            marker.setVisible(true);
+        }
+        // Categories don't match 
+        else {
+            marker.setVisible(false);
+        }
+    }
+}
+
+// Init map
+initialize();
 
 </script>
- <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfwTI3WULHOK4JLWvumndoexg4919Z1Jk&callback=initMap"></script>
-    </section>
