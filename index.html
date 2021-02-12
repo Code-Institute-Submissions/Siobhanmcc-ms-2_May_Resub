@@ -6,6 +6,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script type="text/javascript" src="script.js">
+</script>
     <title>Explore Kildare</title>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0">
@@ -45,7 +47,7 @@
         </div>
     </section>
     <section><h2 id="about">About</h2>
-    <p>Kildare (Irish: Cill Dara, meaning "church of the oak") is a town in County Kildare, Ireland. As of 2016, its population
+    <p id="about-kil">Kildare (Irish: Cill Dara, meaning "church of the oak") is a town in County Kildare, Ireland. As of 2016, its population
     was 8,634[2] making it the 7th largest town in County Kildare. The town lies on the R445, some 50 km (31 mi) west of
     Dublin – near enough for it to have become, despite being a regional centre in its own right, a commuter town for the
     capital. Although Kildare gives its name to the county, Naas is the county town.</p>
@@ -69,90 +71,13 @@
                                 <input name='tour' value='hotel' type='radio' class='form-check-input' />Hotel
                             </label>
                         </div>
+                        <div class='form-check-inline'>
+                            <label class='form-check-label'>
+                                <input name='tour' value='attraction' type='radio' class='form-check-input' />Attractions
+                            </label>
+                        </div>
                     </div>
 <div id="map"></div>
-
-
-        <script>
-            let map;
-            let markers=[];
-            let infoWindow;
-
-            let locations = [
-                {
-                    name: 'one',
-                    tour: 'hotel',
-                    latlng: { lat: 53.14491, lng: -6.9017 },
-                    content: 'google',
-                },
-                {
-                    name: 'one',
-                    tour: 'gaudi',
-                    latlng: { lat: 41.4145, lng: 2.1527 },
-                    content: 'maps',
-                },
-                {
-                    name: 'two',
-                    tour: 'gothic',
-                    latlng: { lat: 41.3839, lng: 2.1821 },
-                    content: 'are'
-                },
-                {
-                    name: 'two',
-                    tour: 'gothic',
-                    latlng: { lat: 41.3840, lng: 2.1762 },
-                    content: 'annoying'
-                }
-            ];
-
-
-            function initMap(){
-                let options = {
-                    center: new google.maps.LatLng(53.16190, -6.90365),
-                    zoom: 12
-                };
-                map = new google.maps.Map( document.getElementById('map'), options );
-                infoWindow = new google.maps.InfoWindow();
-
-
-
-                const addmarker=function(args){
-                    let mkr=new google.maps.Marker({
-                        position: args.latlng,
-                        map: map
-                    });
-                    if( args.hasOwnProperty('icon') ) mkr.setIcon( args.icon );
-                    if( args.hasOwnProperty('name') ) mkr.name=args.name;
-                    if( args.hasOwnProperty('content') ) mkr.content=args.content;
-
-                    google.maps.event.addListener( mkr, 'click', clickhandler );
-                    return mkr;
-                };
-                const clickhandler=function(e){
-                    infoWindow.open( map, this );
-                    infoWindow.setContent( this.content );
-                };
-                const clearmarkers=function(){
-                    markers.forEach( mkr=>{
-                        mkr.setMap( null );
-                    });
-                };
-
-                Array.prototype.slice.call( document.querySelectorAll('input[type="radio"][name="tour"]') ).forEach(function(input){
-                    input.addEventListener('click', function(e){
-                        if( this.value ){
-                            /* clear any markers added to the map already */
-                            clearmarkers();
-
-                            /* only show those that qualify based upon selected tour */
-                            locations.forEach( obj=>{
-                                if( obj.tour==this.value ) markers.push( addmarker.call( this, obj ) );
-                            });
-                        }
-                    });
-                });
-            }
-        </script>
 <section>
 
 <section class="container"><h2 id="contact">Contact</h2>
@@ -179,12 +104,6 @@
         </div>
     </section>
     <footer>
-        <div class="footer"><a href="https://www.facebook.com/siobhan.mccauley.33" target="_blank"><i
-                    class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/siobhanmarynyc/?hl=en" target="_blank"><i
-                    class="fab fa-instagram"></i></a>
-            <a href="https://twitter.com/siobhanmcc123" target="_blank"><i class="fab fa-twitter"></i></a>
-        </div>
     </footer>
 
 
@@ -192,8 +111,6 @@
 
 <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfwTI3WULHOK4JLWvumndoexg4919Z1Jk&callback=initMap"></script>
-    </body>
-    </html>
        
 
      <!-- JavaScript Bundle with Popper -->
