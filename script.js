@@ -69,7 +69,7 @@
             function initMap(){
                 let options = {
                     center: new google.maps.LatLng(53.16190, -6.90365),
-                    zoom: 8
+                    zoom: 9
                 };
                 map = new google.maps.Map( document.getElementById('map'), options );
                 infoWindow = new google.maps.InfoWindow();

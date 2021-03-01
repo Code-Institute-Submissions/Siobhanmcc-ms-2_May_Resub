@@ -1,6 +1,6 @@
 # ms-2
 
-# Siobhan McCauley's Website
+# Explore Kildare
 
 This is a website designed to help users select travel choices in the county of Kildare. It is designed to be responsive on a range of devices making it accessible for users.
 The live link to view it is here https://siobhanmcc.github.io/ms-2/
