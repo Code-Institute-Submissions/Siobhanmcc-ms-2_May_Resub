@@ -86,7 +86,7 @@ The project was deployed to GitHub Pages using the following steps...
 
 ## Code
 Bootstrap4: Bootstrap Library used throughout the project mainly to make site responsive by using the bootstrap navbar dropdown.
-I took code from Scrollspy on the Bootstrap site to build the navigation bar.  
+I took code from Stack Overflow to filter the markers on my Google map.
 
 ## Content
 All content was written by the developer.
