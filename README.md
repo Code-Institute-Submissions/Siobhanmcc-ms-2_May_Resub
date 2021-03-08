@@ -49,10 +49,7 @@ Git was used for version control by utilizing the Gitpod terminal to commit to G
 GitHub:
 GitHub is used to store the projects code after being pushed from Git.
 
-6. Balsamiq:
-Balsamiq was used to create the wireframes during the design process.
-
-7. Google Images: Google Images was used to provide the central image for the site. 
+6. Google Images: Google Images was used to provide the central image for the site. 
 
 ## Testing  
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
@@ -62,7 +59,7 @@ W3C CSS Validator
 
 ## Testing User Stories from User Experience (UX) Section  
 
-1. I am a user coming to the site to explore potential areas to visit in Kildare. On arriving at the site, I can scroll down to get some information about the area itself, and then to the map where I can click off to a variety of hotels, attractions and restaurants to visit in the area.  
+1. I am a user coming to the site to explore potential attractions to visit in Kildare. On arriving at the site, I can scroll down to get some information about the area itself, and then to the map where I can click off to a variety of hotels, attractions and restaurants to visit in the area.  
 
 2. I am a potential visitor to the area looking to ask questions about the county. On scrolling down the page, I can access a contact form where I can contact the owner with any questions I may have. 
 
@@ -84,15 +81,23 @@ The project was deployed to GitHub Pages using the following steps...
    The page will automatically refresh.
 5. Scroll back down through the page to locate the now published site link in the "GitHub Pages" section.
 
+Run locally
+To clone this project into Gitpod, follow these steps: 
+1. Log into GitHub. From the list of repositories on the screen, 
+select Siobhanmcc/ms-2. 
+2. Above the list of files, select Code on the drop-down menu. 
+3. Copy the clone URL under the HTTPS tab.
+4. Start a terminal window in your preferred IDE. 
+5. Change the directory to the whichever location you would like the cloned directory to be located. 
+6. Type git clone, and paste the link you copied in step 3. 
+7. Press enter and your local clone has now been created.
+
 ## Code
 Bootstrap4: Bootstrap Library used throughout the project mainly to make site responsive by using the bootstrap navbar dropdown.
 I took code from Stack Overflow to filter the markers on my Google map.
 
 ## Content
-All content was written by the developer.
-
-## Media
-All Images were created by the developer.  
+All content was written by the developer. 
 
 ## Acknowledgements
 My Mentor Guido Cecillio for continuous helpful feedback.
