@@ -14,7 +14,7 @@ The live link to view it is here https://siobhanmcc.github.io/ms-2/
 ## Design  
 ### Colour Scheme
 
-The main colour used in the site is dark grey.
+The main colour used in the site is light grey.
 
 ### Typography  
 The main font used for the site is Open Sans.
@@ -69,6 +69,8 @@ The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7,
 A large amount of testing was done to ensure that all pages were linking correctly.
 Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
  
+ ## Bugs
+ The social media icons I had included would not show in the footer and I could not figure out why.
 
 ## GitHub Pages  
 The project was deployed to GitHub Pages using the following steps...
