@@ -107,10 +107,8 @@ button {
 }
 
 
-h6 {
-    float: right;
-    margin:0;
-    padding:0;
+footer{
+    text-align:center;
 }
 
 #firstheading {
