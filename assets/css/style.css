@@ -107,17 +107,23 @@ button {
 }
 
 
-footer{
-    text-align:center;
+h6 {
+    margin:0;
+    padding:0;
 }
 
 #firstheading {
  float:left;
- clear:both;
  margin-left:5px;
+ margin-bottom:0;
+ padding:0;
 
 }
 
 p{
     padding:10px;
+}
+
+footer {
+    text-align:center;
 }
