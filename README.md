@@ -5,6 +5,10 @@
 This is a website designed to help users select travel choices in the county of Kildare. It is designed to be responsive on a range of devices making it accessible for users.
 The live link to view it is here https://siobhanmcc.github.io/ms-2/
 
+## Wireframes
+
+![title](assets/images/fallons.jpg)
+
 ##  User Experience (UX)  
 ### User Stories
 
@@ -64,10 +68,12 @@ W3C CSS Validator
 2. I am a potential visitor to the area looking to ask questions about the county. On scrolling down the page, I can access a contact form where I can contact the owner with any questions I may have. 
 
 ## Further Testing
-The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
-The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX.
-A large amount of testing was done to ensure that all pages were linking correctly.
-Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
+I have used development tools in Google Chrome to check how the website would look in different devices (portrait and landscape mode). In addition to that testing I have also asked friends and family to have a look at the website to let me know if everything looks ok on their browsers and devices.
+
+After the tests I can see that the website displays properly in Chrome, Firefox, Safari and Microsoft Edge.
+
+Problems and bugs:
+
 
 ## GitHub Pages  
 The project was deployed to GitHub Pages using the following steps...
