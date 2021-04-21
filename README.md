@@ -61,9 +61,12 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 W3C Markup Validator  
 W3C CSS Validator
 
-## Testing User Stories from User Experience (UX) Section  
+##  Manual Testing User Stories from User Experience (UX) Section  
 
-1. I am a user coming to the site to explore potential attractions to visit in Kildare. On arriving at the site, I can scroll down to get some information about the area itself, and then to the map where I can click off to a variety of hotels, attractions and restaurants to visit in the area.  
+1. I am a user coming to the site to explore potential attractions to visit in Kildare. On arriving at the site, I can scroll down to get some information about the area and then click on one of three filters restaurants, hotels or attractions to see what sites there are to visit. 
+When I click on restaurants, 4 markers appear. ![title](assets/images/restaurant-markers.png)
+On click, an info window opens containing a heading, some descriptive text about the location, a link to the location and a small thumbnail image. I can click on the link to visit the location. 
+![title](assets/images/hartes-screenshot.png)
 
 2. I am a potential visitor to the area looking to ask questions about the county. On scrolling down the page, I can access a contact form where I can contact the owner with any questions I may have. 
 
@@ -73,6 +76,12 @@ I have used development tools in Google Chrome to check how the website would lo
 After the tests I can see that the website displays properly in Chrome, Firefox, Safari and Microsoft Edge.
 
 Problems and bugs:
+
+In my previous submission, there was some feedback about the form accepting invalid or empty data. 
+I have tested whether the email form requires proper input when being filled out. You can see here the warning message which comes up when I don't enter the email properly.
+![title](assets/images/hartes-screenshot.png) 
+
+
 
 
 ## GitHub Pages  
