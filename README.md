@@ -79,7 +79,7 @@ Problems and bugs:
 
 In my previous submission, there was some feedback about the form accepting invalid or empty data. 
 I have tested whether the email form requires proper input when being filled out. You can see here the warning message which comes up when I don't enter the email properly.
-![title](assets/images/hartes-screenshot.png) 
+![title](assets/images/email-form.png) 
 
 
 No automated testing was added. 
