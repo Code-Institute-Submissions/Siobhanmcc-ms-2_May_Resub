@@ -81,6 +81,8 @@ In my previous submission, there was some feedback about the form accepting inva
 I have tested whether the email form requires proper input when being filled out. You can see here the warning message which comes up when I don't enter the email properly.
 ![title](assets/images/email-form.png) 
 
+For the Carousel feature, on desktop it was working. On mobile however, the images were appearing but they were too small and surrounded by a lot of empty space.
+
 
 No automated testing was added. 
 
