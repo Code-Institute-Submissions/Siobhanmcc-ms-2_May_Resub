@@ -82,7 +82,7 @@ I have tested whether the email form requires proper input when being filled out
 ![title](assets/images/hartes-screenshot.png) 
 
 
-
+No automated testing was added. 
 
 ## GitHub Pages  
 The project was deployed to GitHub Pages using the following steps...
