@@ -1,3 +1,9 @@
+$(document).ready(() => {
+    $('#notificationModalOkButton').on('click', () => {
+        $('#notificationModal').modal('hide');
+    });
+});
+
 function sendMail(contactForm) {
     emailjs.send("gmail", "template_yzs246c", {
         "from_name": contactForm.name.value,
@@ -6,8 +12,8 @@ function sendMail(contactForm) {
     })
     .then(
         function(response) {
-            alert("Perfectly sent");
             console.log("SUCCESS", response);
+            $('#notificationModal').modal('show');
         },
         function(error) {
             console.log("FAILED", error);

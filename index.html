@@ -178,16 +178,33 @@
                     class="fab fa-instagram"></i></a>
             <a href="https://twitter.com/siobhanmcc123" target="_blank"><i class="fab fa-twitter"></i></a>
     </footer>
+
+    <!-- Modal used for the send mail notification -->
+    <div id="notificationModal" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Email Sent</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Your email has been sent successfully!</p>
+            </div>
+            <div class="modal-footer">
+                <button id="notificationModalOkButton" type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
     <script src="assets/js/sendEmail.js"></script>
-
-
     <script type="text/javascript" src="assets/js/map.js"></script>
     <script
         src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfwTI3WULHOK4JLWvumndoexg4919Z1Jk&callback=initMap"></script>
-
-
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
