@@ -65,7 +65,7 @@ W3C CSS Validator
 ##  Manual Testing User Stories from User Experience (UX) Section  
 
 1. As a user looking for pictures of places to visit in Kildare, when I land on the site, the carousel feature automatically scrolls and gives a brief description of certain scenic places to visit in Kildare. 
-![title](assets/images/carousel-screenshot.png) I also have the option to scroll down to the 'Gallery' section and click through pictures there. ![title](assets/images/gallery-img.png) 
+![title](assets/images/carousel-screenshot.png) I also have the option to scroll down to the 'Gallery' section and click through pictures there. ![title](assets/images/gallery.png) ![title](assets/images/gallery-img.png) 
 
 
 2. I am a user coming to the site to explore potential attractions to visit in Kildare. On arriving at the site, I can scroll down to get some information about the area and then click on one of three filters restaurants, hotels or attractions to see what sites there are to visit. 
