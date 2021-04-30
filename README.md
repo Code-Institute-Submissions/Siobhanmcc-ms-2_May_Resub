@@ -7,7 +7,7 @@ The live link to view it is here https://siobhanmcc.github.io/ms-2/
 
 ## Wireframes
 
-![title](assets/images/wire-frame-ms2.png)
+![title](assets/images/wireframe-3.png)
 
 ##  User Experience (UX)  
 ### User Stories
