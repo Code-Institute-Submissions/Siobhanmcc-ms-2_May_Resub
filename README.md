@@ -7,13 +7,14 @@ The live link to view it is here https://siobhanmcc.github.io/ms-2/
 
 ## Wireframes
 
-![title](assets/images/MS2-screenshot.png)
+![title](assets/images/wire-frame-ms2.png)
 
 ##  User Experience (UX)  
 ### User Stories
 
-1. As a user, I wish to be able to look through the site and find some places to visit in county Kildare. 
-2. As a potential visitor, I wish to be able to look at the site and contact the owner to ask some questions about places to visit in Kildare. 
+1. As a user, I wish to be able to see some pictures of places I can visit in Kildare.
+2. As a user, I wish to be able to look through the site and find information about places to visit broken down by restaurants, hotels and attractions.  
+3. As a potential visitor, I wish to be able to look at the site and contact the owner to ask some questions about places to visit in Kildare. 
 
 ## Design  
 ### Colour Scheme
@@ -36,7 +37,7 @@ CSS3
 Javascript
 
 ## Frameworks, Libraries & Programs Used  
-1. Bootstrap 4.4.1:  
+1. Bootstrap 5:  
 Bootstrap was used to assist with the responsiveness and styling of the website.
 
 2. Google Fonts:
@@ -63,12 +64,15 @@ W3C CSS Validator
 
 ##  Manual Testing User Stories from User Experience (UX) Section  
 
-1. I am a user coming to the site to explore potential attractions to visit in Kildare. On arriving at the site, I can scroll down to get some information about the area and then click on one of three filters restaurants, hotels or attractions to see what sites there are to visit. 
+1. As a user looking for pictures of places to visit in Kildare, when I land on the site, the carousel feature automatically scrolls and gives a brief description of certain scenic places to visit in Kildare. 
+![title](assets/images/carousel-screenshot.png)
+
+2. I am a user coming to the site to explore potential attractions to visit in Kildare. On arriving at the site, I can scroll down to get some information about the area and then click on one of three filters restaurants, hotels or attractions to see what sites there are to visit. 
 When I click on restaurants, 4 markers appear. ![title](assets/images/restaurant-markers.png)
 On click, an info window opens containing a heading, some descriptive text about the location, a link to the location and a small thumbnail image. I can click on the link to visit the location. 
 ![title](assets/images/hartes-screenshot.png)
 
-2. I am a potential visitor to the area looking to ask questions about the county. On scrolling down the page, I can access a contact form where I can contact the owner with any questions I may have. 
+3. I am a potential visitor to the area looking to ask questions about the county. On scrolling down the page, I can access a contact form where I can contact the owner with any questions I may have. When I click submit on the email form, a message appears saying email sent.![title](assets/images/email-sent-modal.png) 
 
 ## Further Testing
 I have used development tools in Google Chrome to check how the website would look in different devices (portrait and landscape mode). In addition to that testing I have also asked friends and family to have a look at the website to let me know if everything looks ok on their browsers and devices.
@@ -111,7 +115,7 @@ select Siobhanmcc/ms-2.
 7. Press enter and your local clone has now been created.
 
 ## Code
-Bootstrap4: Bootstrap Library used throughout the project mainly to make site responsive by using the bootstrap navbar dropdown.
+Bootstrap5: Bootstrap Library used throughout the project mainly to make site responsive by using the bootstrap navbar dropdown.
 I took code from Stack Overflow to filter the markers on my Google map.
 
 ## Content
