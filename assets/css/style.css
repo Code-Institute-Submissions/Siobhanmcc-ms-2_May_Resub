@@ -85,6 +85,11 @@ h2 {
     padding: 20px;
 }
 
+#gallery {
+    margin: 40px;
+    padding: 20px;
+}
+
 footer {
     min-height:50px;
     margin:20;
