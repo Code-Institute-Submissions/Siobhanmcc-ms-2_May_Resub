@@ -180,17 +180,21 @@ function initMap() {
         });
     };
 
-    Array.prototype.slice.call(document.querySelectorAll('input[type="radio"][name="tour"]')).forEach(function (input) {
-        input.addEventListener('click', function (e) {
-            if (this.value) {
-                /* clear any markers added to the map already */
-                clearmarkers();
+    const onClickHandler = (e) => {
+        if (e.target.value) {
+            /* clear any markers added to the map already */
+            clearmarkers();
 
-                /* only show those that qualify based upon selected tour */
-                locations.forEach(obj => {
-                    if (obj.tour == this.value) markers.push(addmarker.call(this, obj));
-                });
-            }
-        });
+            /* only show those that qualify based upon selected tour */
+            locations.forEach(obj => {
+                if (obj.tour == e.target.value) markers.push(addmarker.call(this, obj));
+            });
+        }
+    }
+
+    Array.prototype.slice.call(document.querySelectorAll('input[type="radio"][name="tour"]')).forEach(function (input) {
+        input.addEventListener('click', onClickHandler);
     });
+
+    document.querySelector('input[type="radio"][name="tour"][value="restaurant"]').click();
 }
