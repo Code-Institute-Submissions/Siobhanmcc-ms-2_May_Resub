@@ -136,3 +136,7 @@ footer {
     text-align:center;
     font-size:3em;
 }
+
+.carousel-item > img {
+    object-fit: cover;
+}
