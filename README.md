@@ -5,9 +5,7 @@
 This is a website designed to help users select travel choices in the county of Kildare. It is designed to be responsive on a range of devices making it accessible for users.
 The live link to view it is here https://siobhanmcc.github.io/ms-2/
 
-## Wireframes
-
-![title](assets/images/wireframe-3.png)
+![title](assets/images/all-devices.png)
 
 ##  User Experience (UX)  
 ### User Stories
@@ -17,9 +15,14 @@ The live link to view it is here https://siobhanmcc.github.io/ms-2/
 3. As a potential visitor, I wish to be able to look at the site and contact the owner to ask some questions about places to visit in Kildare. 
 
 ## Design  
+
+## Wireframes
+
+![title](assets/images/wireframe-3.png)
+
 ### Colour Scheme
 
-The main colour used in the site is light grey.
+The main colour used in the site is #555555 light grey.
 
 ### Typography  
 The main font used for the site is Open Sans.
