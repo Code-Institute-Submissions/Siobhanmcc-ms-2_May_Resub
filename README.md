@@ -70,7 +70,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 W3C Markup Validator  
 W3C CSS Validator
 
-![title](w3validator.png)
+![title](assets/images/w3validator.png)
 
 ##  Manual Testing User Stories from User Experience (UX) Section  
 
