@@ -31,7 +31,12 @@ The main font used for the site is Open Sans.
 The main image for the site is an aerial shot of Kildare town. 
 
 ## Features  
-Responsive on all device sizes. 
+-Navbar
+-Carousel with sliding images
+-Google Map with filtered markers, and info windows
+-Fancybox Gallery
+-Contact form
+-Responsive across all devices
 
 ## Technologies Used  
 ### Languages Used  
@@ -65,6 +70,8 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 W3C Markup Validator  
 W3C CSS Validator
 
+![title](w3validator.png)
+
 ##  Manual Testing User Stories from User Experience (UX) Section  
 
 1. As a user looking for pictures of places to visit in Kildare, when I land on the site, the carousel feature automatically scrolls and gives a brief description of certain scenic places to visit in Kildare. 
@@ -85,10 +92,11 @@ After the tests I can see that the website displays properly in Chrome, Firefox,
 
 Problems and bugs:
 
-In my previous submission, there was some feedback about the form accepting invalid or empty data. 
+1. There was a problem about the form accepting invalid or empty data. 
 I have tested whether the email form requires proper input when being filled out. You can see here the warning message which comes up when I don't enter the email properly.
 ![title](assets/images/email-form.png) 
 
+2. The Carousel was not working. 
 For the Carousel feature, on desktop it was working. On mobile however, the images were appearing but they were too small and surrounded by a lot of empty space. 
 After refreshing the code, the space disappeared and the problem was fixed.  
 
@@ -96,7 +104,7 @@ After refreshing the code, the space disappeared and the problem was fixed.
 
 No automated testing was added. 
 
-## GitHub Pages  
+## Deployment  
 The project was deployed to GitHub Pages using the following steps...
 
 1. Log in to GitHub and locate the GitHub Repository
